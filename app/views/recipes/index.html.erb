@@ -1,0 +1,17 @@
+<h1>Recipes#index</h1>
+<h1>Recipes for <%= keyword %></h1>
+
+<table border = '1'>
+  <tr>
+    <th>Picture</th>
+    <th>Title</th>
+    <th>Ingredients</th>
+  </tr>
+  <% @recipe_list.each do |recipe| %>
+    <tr>
+      <td><%= recipe["href"]</td>
+      <td><%= recipe["title"]</td>
+      <td><%= recipe["ingredients"]</td>
+    </tr>
+  <% end %>
+</table>
