@@ -1,5 +1,4 @@
-<h1>Recipes#index</h1>
-<h2>Recipes for <%= @keyword %></h2>
+<h1>Recipes for <%= @keyword %></h1>
 
 <table border = '1'>
   <tr>
@@ -8,9 +7,9 @@
     <th>Ingredients</th>
   </tr>
   <% @recipe_list.each do |recipe| %>
-    <tr>
+    <tr class="<%= cycle('even', 'odd') %>">
       <td><%= recipe["href"] %></td>
-      <td><%= recipe["title"] %></td>
+      <td><%= link_to recipe["title"], recipe["href"], class: "special_link" %></td>
       <td><%= recipe["ingredients"] %></td>
     </tr>
   <%end%>
