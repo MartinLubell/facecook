@@ -1,5 +1,5 @@
 <h1>Recipes#index</h1>
-<h1>Recipes for <%= keyword %></h1>
+<h2>Recipes for <%= @keyword %></h2>
 
 <table border = '1'>
   <tr>
@@ -9,9 +9,9 @@
   </tr>
   <% @recipe_list.each do |recipe| %>
     <tr>
-      <td><%= recipe["href"]</td>
-      <td><%= recipe["title"]</td>
-      <td><%= recipe["ingredients"]</td>
+      <td><%= recipe["href"] %></td>
+      <td><%= recipe["title"] %></td>
+      <td><%= recipe["ingredients"] %></td>
     </tr>
-  <% end %>
+  <%end%>
 </table>
